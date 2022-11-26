@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor Arabic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="img">
+
+            <div class="img-box">
+                <img src="" id="img" />
+                <canvas id="canvas"></canvas>
+
+            </div>
+            <div class="upload">
+                <label for="upload">تحميل صورة</label>
+                <input type="file" id="upload">
+            </div>
+
+
+        </div>
+        <div class="fillters">
+            <ul>
+
+                <li>
+                    <label for="saturate">تشبع الألوان</label>
+                    <input type="range" id="saturate" min="0" max="200" value="100">
+                </li>
+                <li>
+                    <label for="contrast">التباين</label>
+                    <input type="range" id="contrast" min="0" max="200" value="100">
+                </li>
+                <li>
+                    <label for="brightness">السطوع</label>
+                    <input type="range" id="brightness" min="0" max="200" value="100">
+                </li>
+                <li>
+                    <label for="sepia">تدرج البني</label>
+                    <input type="range" id="sepia" min="0" max="200" value="0">
+                </li>
+                <li>
+                    <label for="grayscale">تدرج الفضي</label>
+                    <input type="range" id="grayscale" min="0" max="1" step="0.1" value="0">
+                </li>
+                <li>
+                    <label for="blur">الشفافية</label>
+                    <input type="range" id="blur" min="0" max="10" step="0.1" value="0">
+                </li>
+                <li>
+                    <label for="hue-rotate">التدرج</label>
+                    <input type="range" id="hue-rotate" min="0" max="350" value="0">
+                </li>
+                <li>
+
+                    <span onclick="resetValue()">تراجع</span>
+                    <a download="image" id="download">تنزيل</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
